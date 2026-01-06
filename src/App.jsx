@@ -6,6 +6,7 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import StoreLocation from './pages/StoreLocation';
 import './styles/index.css';
+import './styles/ios-pwa.css';
 
 function App() {
     return (

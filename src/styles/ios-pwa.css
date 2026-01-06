@@ -1,0 +1,31 @@
+/* iOS Safe Area Support for Fullscreen PWA */
+body {
+    /* Support for safe area insets (iPhone notch, etc.) */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+
+.app-container {
+    min-height: 100vh;
+    /* Account for safe areas in fullscreen mode */
+    min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+}
+
+/* Ensure fixed elements respect safe areas */
+.bottom-nav {
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+}
+
+.cart-footer {
+    bottom: calc(90px + env(safe-area-inset-bottom));
+}
+
+.place-order-section {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+}
+
+.cart-actions {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+}
